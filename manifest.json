@@ -1,98 +1,68 @@
-[
-  {
-    "id": "ukt-chq",
-    "name": "CHQ",
-    "description": "CHQ API mirrors, ported from the UK Turks app's Kotlin provider. Direct JSON, no auth.",
-    "version": "1.0.0",
-    "author": "ukturks",
-    "supportedTypes": ["movie", "tv"],
-    "filename": "providers/chq.js",
-    "enabled": true,
-    "logo": "",
-    "contentLanguage": ["en"],
-    "formats": ["hls", "mp4"],
-    "limited": false,
-    "disabledPlatforms": [],
-    "supportsExternalPlayer": true
-  },
-  {
-    "id": "ukt-vidsrc",
-    "name": "VidSrc",
-    "description": "vsembed.ru embed chain resolved down to the prorcp playlist.",
-    "version": "1.0.0",
-    "author": "ukturks",
-    "supportedTypes": ["movie", "tv"],
-    "filename": "providers/vidsrc.js",
-    "enabled": true,
-    "logo": "",
-    "contentLanguage": ["en"],
-    "formats": ["hls"],
-    "limited": false,
-    "disabledPlatforms": [],
-    "supportsExternalPlayer": true
-  },
-  {
-    "id": "ukt-2embed",
-    "name": "2Embed",
-    "description": "2embed.online encrypted server list, decrypted server-side.",
-    "version": "1.0.0",
-    "author": "ukturks",
-    "supportedTypes": ["movie", "tv"],
-    "filename": "providers/twoembed.js",
-    "enabled": true,
-    "logo": "",
-    "contentLanguage": ["en"],
-    "formats": ["hls"],
-    "limited": false,
-    "disabledPlatforms": [],
-    "supportsExternalPlayer": true
-  },
-  {
-    "id": "ukt-multiembed",
-    "name": "MultiEmbed",
-    "description": "getsuperembed.link server list, streamingnow.mov playback URLs.",
-    "version": "1.0.0",
-    "author": "ukturks",
-    "supportedTypes": ["movie", "tv"],
-    "filename": "providers/multiembed.js",
-    "enabled": true,
-    "logo": "",
-    "contentLanguage": ["en"],
-    "formats": ["hls"],
-    "limited": false,
-    "disabledPlatforms": [],
-    "supportsExternalPlayer": true
-  },
-  {
-    "id": "ukt-primesrc",
-    "name": "PrimeSrc",
-    "description": "primesrc.me server keys surfaced as playable embed pages.",
-    "version": "1.0.0",
-    "author": "ukturks",
-    "supportedTypes": ["movie", "tv"],
-    "filename": "providers/primesrc.js",
-    "enabled": true,
-    "logo": "",
-    "contentLanguage": ["en"],
-    "formats": ["hls"],
-    "limited": false,
-    "disabledPlatforms": [],
-    "supportsExternalPlayer": true
-  },
-  {
-    "id": "ukt-hdhub",
-    "name": "HdHub",
-    "description": "HdHub Stremio-protocol upstream, IMDb-keyed pass-through with proxy headers. Upstream mirror rotates; check the app's domain feed before enabling.",
-    "version": "1.0.0",
-    "author": "ukturks",
-    "supportedTypes": ["movie", "tv"],
-    "filename": "providers/hdhub.js",
-    "enabled": false,
-    "logo": "",
-    "contentLanguage": ["en"],
-    "formats": ["mkv", "mp4", "hls"],
-    "limited": false,
-    "disabledPlatforms": [],
-    "supportsExternalPlayer": true
-  }
-]
+{
+  "name": "UKTurks Providers",
+  "version": "1.0.0",
+  "description": "UK Turks stream pipeline as Nuvio plugins: CHQ, PrimeSrc, 2Embed, MultiEmbed, VidSrc, HdHub.",
+  "author": "mastermark1337-pixel",
+  "scrapers": [
+    {
+      "id": "ukt-chq",
+      "name": "CHQ",
+      "description": "CHQ API mirrors, ported from the UK Turks app's Kotlin provider. Direct JSON, no auth.",
+      "version": "1.0.0",
+      "filename": "providers/chq.js",
+      "supportedTypes": ["movie", "tv"],
+      "contentLanguage": ["en"],
+      "logo": ""
+    },
+    {
+      "id": "ukt-primesrc",
+      "name": "PrimeSrc",
+      "description": "primesrc.me server keys surfaced as playable embed pages.",
+      "version": "1.0.0",
+      "filename": "providers/primesrc.js",
+      "supportedTypes": ["movie", "tv"],
+      "contentLanguage": ["en"],
+      "logo": ""
+    },
+    {
+      "id": "ukt-2embed",
+      "name": "2Embed",
+      "description": "2embed.online player sources, upcloud.2embed.stream HLS.",
+      "version": "1.0.0",
+      "filename": "providers/twoembed.js",
+      "supportedTypes": ["movie", "tv"],
+      "contentLanguage": ["en"],
+      "logo": ""
+    },
+    {
+      "id": "ukt-multiembed",
+      "name": "MultiEmbed",
+      "description": "getsuperembed.link playback URLs on streamingnow.mov.",
+      "version": "1.0.0",
+      "filename": "providers/multiembed.js",
+      "supportedTypes": ["movie", "tv"],
+      "contentLanguage": ["en"],
+      "logo": ""
+    },
+    {
+      "id": "ukt-vidsrc",
+      "name": "VidSrc",
+      "description": "vsembed.ru -> vs_src.php -> player chain. Final stream call is bot-gated on some networks.",
+      "version": "1.0.0",
+      "filename": "providers/vidsrc.js",
+      "supportedTypes": ["movie", "tv"],
+      "contentLanguage": ["en"],
+      "logo": ""
+    },
+    {
+      "id": "ukt-hdhub",
+      "name": "HdHub",
+      "description": "HdHub Stremio-protocol pass-through. Upstream mirror is down; kept for domain rotation.",
+      "version": "1.0.0",
+      "filename": "providers/hdhub.js",
+      "supportedTypes": ["movie", "tv"],
+      "contentLanguage": ["en"],
+      "logo": ""
+    }
+  ]
+}
