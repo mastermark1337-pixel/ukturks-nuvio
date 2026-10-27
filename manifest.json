@@ -5,6 +5,15 @@
   "author": "mastermark1337-pixel",
   "scrapers": [
     {
+      "id": "ukt-dmmplus",
+      "name": "DMM Plus",
+      "description": "Debrid Media Manager (TorBox cast) merged with CHQ, PrimeSrc, 2Embed, MultiEmbed and VidSrc. Beats DMM's 5-entry cap.",
+      "version": "1.0.0",
+      "filename": "providers/dmmplus.js",
+      "supportedTypes": ["movie", "tv"],
+      "contentLanguage": ["en"],
+      "logo": ""
+    },    {
       "id": "ukt-chq",
       "name": "CHQ",
       "description": "CHQ API mirrors, ported from the UK Turks app's Kotlin provider. Direct JSON, no auth.",

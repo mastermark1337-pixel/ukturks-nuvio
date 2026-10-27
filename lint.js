@@ -39,9 +39,16 @@ providers.forEach(function (p) {
     return;
   }
   var src = fs.readFileSync(file, "utf8");
-  var hits = banned.filter(function (b) { return b.re.test(src); });
 
-  if (!/module\.exports\s*=\s*\{[^}]*getStreams/.test(src)) {
+  // Strip comments before the syntax scan: provider headers legitimately say
+  // "no async/await" in prose, and that is not a violation of the rule.
+  var code = src
+    .replace(/\/\*[\s\S]*?\*\//g, "")
+    .replace(/(^|[^:])\/\/[^\n]*/g, "$1");
+
+  var hits = banned.filter(function (b) { return b.re.test(code); });
+
+  if (!/module\.exports\s*=\s*\{[^}]*getStreams/.test(code)) {
     hits.push({ why: "no module.exports = { getStreams }" });
   }
 
